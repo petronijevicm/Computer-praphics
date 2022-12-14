@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Crtanje Aplikacija</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  </head>
+  <!-- U JS fajlu su komentari , ovde je sve prilicno jasno i prosto -->
+  <body>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTyLgluz42AHgQJq9jfahmJZXsQKoPmmA",
+        authDomain: "racunarska-grafika.firebaseapp.com",
+        projectId: "racunarska-grafika",
+        storageBucket: "racunarska-grafika.appspot.com",
+        messagingSenderId: "552914790845",
+        appId: "1:552914790845:web:444415dfdb7f1dfa9c0ad4"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    
+    <nav>
+      
+      <div class="collapsible-menu">
+        <input type="checkbox" id="menu">
+        <label for="menu" class="MENI2">Meni              230/2021</label>
+        <div class="menu-content">
+          <section class="tools-board">
+            <div class="row">
+              <label class="title">Oblici</label>
+              <ul class="options">
+                <li class="option tool" id="rectangle">
+                  <img src="icons/rectangle.svg" alt="">
+                  <span>Pravugaonik</span>
+                </li>
+                <li class="option tool" id="circle">
+                  <img src="icons/circle.svg" alt="">
+                  <span>Krug</span>
+                </li>
+                <li class="option tool" id="triangle">
+                  <img src="icons/triangle.svg" alt="">
+                  <span>Trougao</span>
+                </li>
+                <li class="option">
+                  <input type="checkbox" id="fill-color">
+                  <label class="cb1" for="fill-color">ispunjen</label>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="row">
+              <label class="title">Četke</label>
+              <ul class="options">
+                <li class="option active tool" id="brush">
+                  <img src="icons/brush.svg" alt="">
+                  <span>Olovka</span>
+                </li>
+                <li class="option tool" id="eraser">
+                  <img src="icons/eraser.svg" alt="">
+                  <span>Gumica</span>
+                </li>
+                <li class="option">
+                  <input type="checkbox" id="line-end">
+                  <label class="cb1" for="line-end">okrugla</label>
+                </li>
+              </ul>
+            </div>
+            <div class="row colors">
+              <label class="title">Boja</label>
+              <ul class="options">
+                <li class="option"></li>
+                <li class="option selected"></li>
+                <li class="option"></li>
+                <li class="option"></li>
+                <li class="option">
+                  <input type="color" id="color-picker" value="#4A98F7">
+                </li>
+              </ul>
+            </div>
+            <div class="row sliders">
+              <label class="title">Dodatno</label>
+              <li class="option">
+                <span>Veličina</span>
+                <input type="range" id="size-slider" min="1" max="30" value="5">
+              </li>
+              <li class="option">
+                <span>Transparentnost</span>
+                <input type="range" id="transparency-slider" min="1" max="100" value="100">
+              </li>
+            </div>
+            <div class="row buttons">
+             
+              <button class="clear-canvas">Ocisti sliku</button>
+              <button class="save-img">Sacuvaj sliku</button>
+            </div>
+          </section>
+        </div>
+    </div>
+    </nav>
+    <div class="container">
+      
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+  </body>
+</html>

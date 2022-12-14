@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+/* Ovde takodje nema komentara jer bi bili suvisni s obzirom da nema svrhe objasnjavati css, sve je u imenima klasa */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+  cursor: pointer;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient( -45deg ,#ee7752, #e73c7e, #d5a223, #d523a8);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+@keyframes gradient{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+nav{
+  position: fixed; 
+  left: 0;
+  top: 0;
+  background-color: rgba(41, 41, 41, 0.85);
+  width: 100vw;
+  height: 60px;
+  /* border-bottom: 2px solid black a; */
+}
+.container{
+  margin-top: 9vh;
+  margin-bottom: 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  gap: 10px;
+  padding: 5px;
+  max-width: 1920px;
+  max-height: 90vh;
+}
+
+.tools-board{
+  width: 50vw;
+  border-radius: 7px;
+  padding: 10px 20px 0;
+  overflow: scroll;
+  overflow-y: visible;
+  background: rgba(41, 41, 41, .9);
+  /* backdrop-filter: blur(100%); */
+  /* border: 2px solid black; */
+  font-size: 20px;
+
+}
+.tools-board .row{
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+.row .options{
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+.sliders{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sliders span{
+  padding: 0;
+}
+.row .options .option{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.option:is(:hover, .active) img{
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option :where(span, label){
+  padding: 10px 0 5px 5px;
+  color: #dee9f3;
+  /* color: #5A6168; */
+  cursor: pointer;
+  /* padding-left: 10px; */
+}
+.option:is(:hover, .active) :where(span, label){
+  color: #f7984a;
+}
+.option #fill-color{
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  color: #fff;
+}
+#fill-color:checked ~ label{
+  color: #02d1e4;
+}
+.option #line-end{
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  color: #fff;
+}
+#line-end:checked ~ label{
+  color: #02d1e4;
+}
+.option #size-slider{
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.option #transparency-slider{
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.colors .options{
+  display: flex;
+  justify-content: flex-start;
+}
+.colors .option{
+  margin-right: 9px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+.colors .option:nth-child(1){
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+.colors .option:nth-child(2){
+  background-color: #000;
+}
+.colors .option:nth-child(3){
+  background-color: #E02020;
+}
+.colors .option:nth-child(4){
+  background-color: #6DD400;
+}
+.colors .option:nth-child(5){
+  background-color: #4A98F7;
+}
+.colors .option.selected::before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before{
+  border-color: #ccc;
+}
+.option #color-picker{
+  opacity: 0;
+  cursor: pointer;
+}
+.buttons button{
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.buttons .clear-canvas{
+ color: #dee9f3;
+  border: 1px solid #6C757D;
+  transition: all 0.3s ease;
+}
+.clear-canvas:hover{
+  color: #fff;
+  background: #6C757D;
+}
+.buttons .save-img{
+  background: #4A98F7;
+  border: 1px solid #4A98F7;
+}
+.drawing-board{
+  flex: 1;
+  overflow: hidden;
+  border-radius: 7px;
+  border: 2px solid black;
+}
+.drawing-board canvas{
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+}
+.drawing-board canvas:hover{
+cursor: crosshair;
+}
+.menu-content {
+  font-family: 'poppins', sans-serif; 
+}
+.collapsible-menu {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0px 10px;
+  backdrop-filter: blur(15px);
+}
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+.collapsible-menu a {
+  display:block;
+  padding: 10px;
+  text-decoration: none;
+}
+.collapsible-menu label {
+  display: block;
+  /* background: url(menu.png) no-repeat left center; */
+  /* padding: 10px 0 5px 5px; */
+  
+  /* font-family: 'Rubik Mono One', sans-serif; */
+  font-weight: 900;
+  letter-spacing: 1px;
+  
+
+}
+.MENI2{
+  color: white;
+  margin-top: 3px;
+  font-size: 25px;
+  background-image: url(menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-clip: padding-box;
+  font-family: 'Rubik Mono One', sans-serif;
+  padding: 10px 0 5px 50px;
+
+}
+input#menu {
+  display: none;
+}
+input:checked +label {
+  background-image: url(cross.png);
+  transition-duration: .5s;
+}
+.menu-content {
+  max-height: 0;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif; 
+  padding: 0 0 0 50px;
+  
+}
+input:checked ~ label {
+  background-image: url(cross.png);
+}
+input:checked ~ .menu-content {
+  max-height: 100vh;
+  min-height: 100vh;
+  z-index: 999;
+
+}
+
+.cb1{
+  background-size: 0%;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+.title{
+  font-size: 15px;
+}
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 15px;
+    padding: 0;
+  }
+  .MENI2{
+    font-size: 20px;
+  }
+  .tools-board{
+    width: 100vw;
+    padding: 1px 20px 20px;
+    background: rgba(41, 41, 41, .85);
+  
+  }
+  nav{
+   height: 50px;
+  }
+  .menu-content {
+ 
+    padding: 0;
+  }
+  .tools-board .row{
+    margin-bottom: 0px;
+    margin-top: 2px;
+  }
+  .collapsible-menu label {
+    display: block;
+    /* background: url(menu.png) no-repeat left center; */
+    /* padding: 2px 0 5px 5px; */
+    
+    /* font-family: 'Rubik Mono One', sans-serif; */
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+  
+  }
+  .collapsible-menu {
+    padding: 0px;
+    backdrop-filter: blur(5px);
+  }
+}
