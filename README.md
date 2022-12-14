@@ -24,6 +24,7 @@ Takodje u aplikaciju sam dodao mogucnost korisniku da preuzme nacrtani rad. kome
 1. na pocetku korisnik dobija prazan canvas i selekrovanu crnu olovku sa kockastom ivicom kojom moze sarati crtez.
 2. pritiskom na meni, korisniku se otvaraju opcije za promenu oblika, gumice ,boje itd.
 3. kada korisnik izabere zeljene postavke ponovo pritiska taster meni i nastavlja sa crtanjem
+4. *ako bira boju, cetvrta opcija koja izgleda plavo je u stvari color picker*
 
 #### napomena!
 ***Ako korisnik pokusa da promeni velicinu prozora u toku crtanaja, stranica ce se osveziti jer se  canvas rastegao responzivno i izgubila je se ostrina slike i odnos stranica.***
