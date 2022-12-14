@@ -28,3 +28,6 @@ Takodje u aplikaciju sam dodao mogucnost korisniku da preuzme nacrtani rad. kome
 
 #### napomena!
 ***Ako korisnik pokusa da promeni velicinu prozora u toku crtanaja, stranica ce se osveziti jer se  canvas rastegao responzivno i izgubila je se ostrina slike i odnos stranica.***
+## Slike aplikacije
+![1](https://i.ibb.co/MsnXBg9/Screenshot-2022-12-14-051611.png)
+![2](https://i.ibb.co/W2bg25W/Screenshot-2022-12-14-051654.png)
