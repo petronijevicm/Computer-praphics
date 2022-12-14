@@ -6,7 +6,7 @@ Fully responsive,
 you can check the project out hosted [Live](https://rg.petronijevicm.com/).
 
 
-# Paint
+# Dokumentacija
 paint je bila moja ideja za projekat iz racunarkse grafike, projekat sam realizovao pomocu canvasa u javascriptu, sastoji se od 3 glavna fajla (index.html, style css i script.js kao i par dodatnih fajlova za ikonice. web stranicu sam samostalno hostovao i moze se posetiti u gore navedenom linku. moj Paint sadrzi sledece opcije: 
 + olovka
 + gumica
