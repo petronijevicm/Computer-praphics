@@ -21,9 +21,9 @@ paint je bila moja ideja za projekat iz racunarkse grafike, projekat sam realizo
 Takodje u aplikaciju sam dodao mogucnost korisniku da preuzme nacrtani rad. komenati su dati samo u javascript fajlu zbog toga sto bi bilo besmisleno objasnjavati stylesheet i html.
 
 ## Koriscenje aplikacije
-1.na pocetku korisnik dobija prazan canvas i selekrovanu crnu olovku sa kockastom ivicom kojom moze sarati crtez.
-2.pritiskom na meni, korisniku se otvaraju opcije za promenu oblika, gumice ,boje itd.
-3.kada korisnik izabere zeljene postavke ponovo pritiska taster meni i nastavlja sa crtanjem
+1. na pocetku korisnik dobija prazan canvas i selekrovanu crnu olovku sa kockastom ivicom kojom moze sarati crtez.
+2. pritiskom na meni, korisniku se otvaraju opcije za promenu oblika, gumice ,boje itd.
+3. kada korisnik izabere zeljene postavke ponovo pritiska taster meni i nastavlja sa crtanjem
 
 #### napomena!
 *** ako korisnik pokusa da promeni velicinu prozora u toku crtanaja, strannica ce se osveziti jer se  canvas rastegao responzivno i izgubila je se ostrina slike i odnos stranica. ***
