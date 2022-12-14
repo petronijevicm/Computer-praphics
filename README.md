@@ -26,4 +26,4 @@ Takodje u aplikaciju sam dodao mogucnost korisniku da preuzme nacrtani rad. kome
 3. kada korisnik izabere zeljene postavke ponovo pritiska taster meni i nastavlja sa crtanjem
 
 #### napomena!
-***Ako korisnik pokusa da promeni velicinu prozora u toku crtanaja, strannica ce se osveziti jer se  canvas rastegao responzivno i izgubila je se ostrina slike i odnos stranica.***
+***Ako korisnik pokusa da promeni velicinu prozora u toku crtanaja, stranica ce se osveziti jer se  canvas rastegao responzivno i izgubila je se ostrina slike i odnos stranica.***
